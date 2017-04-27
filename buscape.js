@@ -4,7 +4,6 @@
   // var customerId = html.getAttribute('data-session');
   var customerId = "asahshajhsj"
   var storeId    = document.scripts["mltplace_tray"].src.replace(/.*?\?storeId=/, "")
-  alert(storeId);
 
   if(customerId){
     var layer = dataLayer[0];
@@ -13,7 +12,7 @@
       return;
 
     } else {
-      var iframeUrl = "//o.lomadee.com/loc/session/";
+      var iframeUrl = "https://o.lomadee.com/loc/session/";
 
       var iframe         = document.createElement("iframe");
       iframe.src         = iframeUrl + storeId + "?customerid=" + customerId;
