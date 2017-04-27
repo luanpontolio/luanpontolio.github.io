@@ -1,30 +1,27 @@
-function buscape() {
-  'use strict';
-  var html       = document.querySelector('html');
-  // var customerId = html.getAttribute('data-session');
-  var customerId = "asahshajhsj"
-  var storeId    = html.getAttribute('data-store');
+// function buscape() {
 
-  if(customerId){
-    var layer = dataLayer[0];
+//   var html       = document.querySelector('html');
+//   var customerId = "asahshajhsj"
+//   var storeId = html.getAttribute('data-store');
 
-    if (layer.pageCategory != 'Carrinho'){
-      return;
+//   if(customerId){
+//     var layer = dataLayer[0];
 
-    } else {
-      var iframeUrl = "https://o.lomadee.com/loc/session/";
+//     if (layer.pageCategory != 'Carrinho'){
+//       return;
 
-      var iframe         = document.createElement("iframe");
-      iframe.src         = iframeUrl + storeId + "?customerid=" + customerId;
-      iframe.width       = 0;
-      iframe.height      = 0;
-      iframe.frameheight = 0;
-      iframe.frameborder = 0;
+//     } else {
+//       var iframeUrl = "https://o.lomadee.com/loc/session/";
 
-      document.body.appendChild(iframe);
-    }
-  }
-};
+//       var iframe         = document.createElement("iframe");
+//       iframe.src         = iframeUrl + storeId + "?customerid=" + customerId;
+//       iframe.width       = 0;
+//       iframe.height      = 0;
+
+//       document.body.appendChild(iframe);
+//     }
+//   }
+// };
 
 (function(d, s, id) {
   var js, script = d.getElementsByTagName(s)[0];
@@ -35,9 +32,8 @@ function buscape() {
 
   js        = d.createElement(s);
   js.id     = id;
-  js.async = true;
-  js.src    = "#";
-  js.onload = this.buscape;
+  js.async  = true;
+  js.src    = "https://luanpontolio.github.io/buscape.js?storeId=" + storeId;
   script.parentNode.insertBefore(js, script);
 
 }(document, 'script', 'mltplace_tray'));

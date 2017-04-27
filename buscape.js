@@ -3,7 +3,9 @@
   var html       = document.querySelector('html');
   // var customerId = html.getAttribute('data-session');
   var customerId = "asahshajhsj"
-  var storeId    = html.getAttribute('data-store');
+  var scripts    = document.scripts;
+  var storeId    = scripts["mltplace_tray"].src.replace(".*\?storeId=", "")
+  alert(storeId);
 
   if(customerId){
     var layer = dataLayer[0];
