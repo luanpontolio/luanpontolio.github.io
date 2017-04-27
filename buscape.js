@@ -4,7 +4,7 @@
   // var customerId = html.getAttribute('data-session');
   var customerId = "asahshajhsj"
   var scripts    = document.scripts;
-  var storeId    = scripts["mltplace_tray"].src.replace(".*\?storeId=", "")
+  var storeId    = scripts["mltplace_tray"].src.replace(/.*\?storeId=/, "")
   alert(storeId);
 
   if(customerId){

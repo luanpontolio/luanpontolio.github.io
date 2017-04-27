@@ -33,7 +33,7 @@
   js        = d.createElement(s);
   js.id     = id;
   js.async  = true;
-  js.src    = "https://luanpontolio.github.io/buscape.js?storeId=" + storeId;
+  js.src    = "//luanpontolio.github.io/buscape.js?storeId=" + storeId;
   script.parentNode.insertBefore(js, script);
 
 }(document, 'script', 'mltplace_tray'));
