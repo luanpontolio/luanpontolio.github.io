@@ -27,16 +27,16 @@ function buscape() {
 }
 
 function loadScript() {
-  var script = document.scripts
-  var url    = script["teste"];
-  var params = url.src.replace(/.*\?params=/, "");
-  alert(params);
+  // var script = document.scripts
+  // var url    = script["teste"];
+  // var params = url.src.replace(/.*\?params=/, "");
+  // alert(params);
 
   var a    = document.createElement("script");
   a.type   = "text/javascript";
   a.async  = true;
   a.id     = "mktplace_tray";
-  a.src    = "script.js";
+  a.src    = "#";
   a.onload = this.buscape();
   var b    = document.getElementsByTagName("script")[0];
 
