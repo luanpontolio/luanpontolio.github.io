@@ -1,10 +1,11 @@
 (function() {
   'use strict';
   var html       = document.querySelector('html');
-  var customerId = html.getAttribute('data-session');
+  // var customerId = html.getAttribute('data-session');
+  var customerId = "asahshajhsj"
   var storeId    = html.getAttribute('data-store');
 
-  if(customerId && dataLayer[0]){
+  if(customerId){
     var layer = dataLayer[0];
 
     if (layer.pageCategory != 'Carrinho'){
