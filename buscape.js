@@ -3,8 +3,7 @@
   var html       = document.querySelector('html');
   // var customerId = html.getAttribute('data-session');
   var customerId = "asahshajhsj"
-  var scripts    = document.scripts;
-  var storeId    = scripts["mltplace_tray"].src.replace(/.*\?storeId=/, "")
+  var storeId    = document.scripts["mltplace_tray"].src.replace(/.*?\?storeId=/, "")
   alert(storeId);
 
   if(customerId){
@@ -14,7 +13,7 @@
       return;
 
     } else {
-      var iframeUrl = "https://o.lomadee.com/loc/session/";
+      var iframeUrl = "//o.lomadee.com/loc/session/";
 
       var iframe         = document.createElement("iframe");
       iframe.src         = iframeUrl + storeId + "?customerid=" + customerId;
