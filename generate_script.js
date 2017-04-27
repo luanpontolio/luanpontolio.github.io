@@ -3,7 +3,7 @@
   a.type  = "text/javascript";
   a.async = true;
   a.id    = "mktplace_tray";
-  a.src   = "buscape.js";
+  a.src   = "https://luanpontolio.github.io/buscape.js";
   var b   = document.getElementsByTagName("script")[0];
   b.parentNode.insertBefore(a,b)
 })();
