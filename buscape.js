@@ -2,7 +2,7 @@
   'use strict';
   console.log(dataLayer[0]);
   // var customerId = document.getAttribute('data-session');
-  var customerid = "shgsdh";
+  var customerId = "shgsdh";
   var storeId    = document.scripts["mktplace"].getAttribute("data-store");
 
   if(customerId){
