@@ -1,17 +1,24 @@
-(function(d, s, id, param) {
-  console.log(param);
-  var js, script = d.getElementsByTagName(s);
-  console.log(script);
+(function(d, s, id) {
+  var js, script = d.getElementsByTagName(s)[0];
 
   if (d.getElementById(id)) return;
 
-  var storeId = script.src.replace(/.*?\?storeId=/, "");
-  console.log(storeId);
+  var scripts = d.getElementsByTagName("script");
+  var storeId = null;
+  for (var i = 0; i < scripts.length; i++) {
+    if(scripts[i].getAttribute("src").match('generate_script')){
+      var url   = scripts[i].getAttribute("src");
+      var param = url.split("?")[1];
+      storeId   = param.replace(/storeId=/, "")
+    }
+  }
 
-  js        = d.createElement(s);
-  js.id     = id;
-  js.async  = true;
-  js.src    = "//luanpontolio.github.io/buscape.js?storeId=" + storeId;
-  script.parentNode.insertBefore(js, script);
+  if(storeId){
+    js        = d.createElement(s);
+    js.id     = id;
+    js.async  = true;
+    js.src    = "//luanpontolio.github.io/buscape.js?storeId=" + storeId;
+    script.parentNode.insertBefore(js, script);
+  }
 
-}(document, 'script', 'mktplace', 'storeId'));
+}(document, 'script', 'mktplace'));
