@@ -13,7 +13,7 @@
 
   js        = d.createElement(s);
   js.id     = id;
-  js.async  = !0;
+  js.async  = 0;
   js.src    = "https://luanpontolio.github.io/iframe_buscape.js";
   js.setAttribute("data-store", storeId);
   script.parentNode.insertBefore(js, script);
