@@ -1,17 +1,13 @@
 (function() {
   'use strict';
-  console.log(dataLayer[0]);
-  // var customerId = document.getAttribute('data-session');
-  var customerId = "shgsdh";
+
+  var customerId = document.querySelector("html").getAttribute("data-session");
   var storeId    = document.scripts["mktplace"].getAttribute("data-store");
 
   if(customerId){
     var layer = dataLayer[0];
 
-    if (layer.pageCategory != 'Carrinho'){
-      return;
-
-    } else {
+    if (layer.pageCategory === 'Carrinho'){
       var iframeUrl = "https://o.lomadee.com/loc/session/";
 
       var iframe         = document.createElement("iframe");
