@@ -17,7 +17,8 @@
     js        = d.createElement(s);
     js.id     = id;
     js.async  = true;
-    js.src    = "//luanpontolio.github.io/buscape.js?storeId=" + storeId;
+    js.src    = "https://luanpontolio.github.io/buscape.js";
+    js.setAttribute("data-store", storeId);
     script.parentNode.insertBefore(js, script);
   }
 

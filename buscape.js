@@ -3,7 +3,7 @@
   var html       = document.querySelector('html');
   // var customerId = html.getAttribute('data-session');
   var customerId = "asahshajhsj"
-  var storeId    = document.scripts["mktplace"].src.replace(/.*?\?storeId=/, "")
+  var storeId    = document.scripts["mktplace"].getAttribute("data-store").replace(/.*?\?storeId=/, "")
 
   if(customerId){
     var layer = dataLayer[0];
