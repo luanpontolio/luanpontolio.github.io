@@ -6,6 +6,8 @@
 
   if(customerId){
     var layer = dataLayer[0];
+    console.log("Entrou no customerid");
+    console.log(dataLayer[0])
 
     if (layer.pageCategory === 'Carrinho'){
       var iframeUrl = "https://o.lomadee.com/loc/session/";
