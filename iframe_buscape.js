@@ -1,6 +1,7 @@
-jQuery(document).ready(function(){
-  (function() {
-    'use strict';
+(function() {
+  'use strict';
+
+  jQuery(document).ready(function(){
 
     if(typeof dataLayer === "undefined"){
       return;
@@ -26,5 +27,5 @@ jQuery(document).ready(function(){
         document.body.appendChild(iframe);
       }
     }
-  })()
-});
+  });
+})(jQuery);
