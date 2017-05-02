@@ -7,6 +7,7 @@
   console.log(storeId);
 
   if(customerId){
+    console.log(document.observe.name);
     var layer = dataLayer[0];
     console.log("Entrou no customerid");
     console.log(dataLayer[0])

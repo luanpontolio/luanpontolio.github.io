@@ -16,6 +16,7 @@
   js.async  = 0;
   js.src    = "https://luanpontolio.github.io/iframe_buscape.js";
   js.setAttribute("data-store", storeId);
-  script.parentNode.insertBefore(js, script);
+  d.getElementsByTagName("head")[0].appendChild(script);
+  // script.parentNode.insertBefore(js, script);
 
 }(document, 'script', 'mktplace'));
