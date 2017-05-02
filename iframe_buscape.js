@@ -1,4 +1,4 @@
-jQuery(document).on('load', 'dataLayer', function(){
+jQuery(document).ready(function(){
   (function() {
     'use strict';
 
