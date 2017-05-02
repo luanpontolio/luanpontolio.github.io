@@ -1,4 +1,4 @@
-(function(w, d, dl) {
+(function() {
   'use strict';
 
   // var customerId = d.querySelector("html").getAttribute("data-session");
@@ -7,7 +7,7 @@
   console.log(storeId);
 
   if(customerId){
-    var layer = w[dl][0];
+    var layer = dataLayer[0];
     console.log(layer);
 
     if (layer.pageCategory === 'Carrinho'){
@@ -23,4 +23,4 @@
       d.body.appendChild(iframe);
     }
   }
-}(window, document, 'dataLayer'));
+})(jQuery);
