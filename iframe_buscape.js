@@ -1,8 +1,10 @@
 (function() {
   'use strict';
 
-  var customerId = document.querySelector("html").getAttribute("data-session");
+  // var customerId = document.querySelector("html").getAttribute("data-session");
+  var customerId = 'ashauhsua'
   var storeId    = document.scripts["mktplace"].getAttribute("data-store");
+  console.log(storeId);
 
   if(customerId){
     var layer = dataLayer[0];
