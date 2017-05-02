@@ -2,13 +2,16 @@ jQuery(document).ready(function(){
   (function() {
     'use strict';
 
+    if(typeof dataLayer === "undefined"){
+      return;
+    }
+
     // var customerId = document.querySelector("html").getAttribute("data-session");
     var customerId = 'ashauhsua'
     var storeId    = document.scripts["mktplace"].getAttribute("data-store");
 
     if(customerId){
       var layer = dataLayer[0];
-      console.log(layer);
 
       if (layer.pageCategory === 'Carrinho'){
         var iframeUrl = "https://o.lomadee.com/loc/session/";
