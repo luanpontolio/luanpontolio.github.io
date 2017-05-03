@@ -10,7 +10,7 @@
     var storeId    = _this.scripts["mktplace"].getAttribute("data-store");
 
     if(customerId){
-      var layer = window[dataLayer[0]];
+      var layer = dataLayer[0];
 
       if (layer.pageCategory === 'Carrinho'){
         var iframeUrl = "https://o.lomadee.com/loc/session/";
