@@ -5,7 +5,8 @@
       return;
     }
 
-    var customerId = _this.querySelector("html").getAttribute("data-session");
+    // var customerId = _this.querySelector("html").getAttribute("data-session");
+    var customerId = "ashaushua";
     var storeId    = _this.scripts["mktplace"].getAttribute("data-store");
 
     if(customerId){
