@@ -1,16 +1,17 @@
-(function($) {
-  $(document).ready(function(){
+var verifyDataLayer = function() {
+  jQuery(document).ready(function(){
     var _this = this;
     if(typeof dataLayer === "undefined"){
+      console.log("entrou akkk");
       return;
     }
 
-    // var customerId = _this.querySelector("html").getAttribute("data-session");
-    var customerId = "ashaushua";
+    var customerId = _this.querySelector("html").getAttribute("data-session");
     var storeId    = _this.scripts["mktplace"].getAttribute("data-store");
 
     if(customerId){
       var layer = dataLayer[0];
+      console.log(dataLayer);
 
       if (layer.pageCategory === 'Carrinho'){
         var iframeUrl = "https://o.lomadee.com/loc/session/";
@@ -23,7 +24,11 @@
         iframe.frameborder = 0;
 
         document.body.appendChild(iframe);
+
+        clearInterval(executeIframe);
       }
     }
   });
-}(jQuery));
+};
+
+var executeIframe = setInterval(  verifyDataLayer , 3000 );
