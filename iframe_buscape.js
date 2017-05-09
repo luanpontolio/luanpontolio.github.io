@@ -11,9 +11,9 @@ var verifyDataLayer = function() {
 
     if(customerId){
       var layer = dataLayer[0];
-      console.log(dataLayer);
+      console.log(layer);
 
-      if (layer.pageCategory === 'Carrinho'){
+      if (layer.visitorId && layer.pageCategory === 'Carrinho'){
         var iframeUrl = "https://o.lomadee.com/loc/session/";
 
         var iframe         = _this.createElement("iframe");
