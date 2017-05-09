@@ -9,24 +9,23 @@ var verifyDataLayer = function() {
     var storeId    = _this.scripts["mktplace"].getAttribute("data-store");
 
     if(customerId){
-      var layer = dataLayer[0];
-
-      if (layer.visitorId && layer.pageCategory === 'Carrinho'){
+      var layer  = dataLayer[0];
+      var iframe = _this.getElementById('iframe_mktplace');
+      if(iframe == null && layer.visitorId && layer.pageCategory === 'Carrinho'){
         clearInterval(executeIframe);
         var iframeUrl = "https://o.lomadee.com/loc/session/";
 
         var iframe         = _this.createElement("iframe");
         iframe.src         = iframeUrl + storeId + "?customerid=" + customerId;
+        iframe.id          = "iframe_mktplace";
         iframe.width       = 0;
         iframe.height      = 0;
         iframe.frameheight = 0;
         iframe.frameborder = 0;
 
         document.body.appendChild(iframe);
-
       }
     }
-
   });
 };
 
