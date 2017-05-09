@@ -2,7 +2,6 @@ var verifyDataLayer = function() {
   jQuery(document).ready(function(){
     var _this = this;
     if(typeof dataLayer === "undefined"){
-      console.log("entrou akkk");
       return;
     }
 
@@ -11,9 +10,9 @@ var verifyDataLayer = function() {
 
     if(customerId){
       var layer = dataLayer[0];
-      console.log(layer);
 
       if (layer.visitorId && layer.pageCategory === 'Carrinho'){
+        clearInterval(executeIframe);
         var iframeUrl = "https://o.lomadee.com/loc/session/";
 
         var iframe         = _this.createElement("iframe");
@@ -25,10 +24,10 @@ var verifyDataLayer = function() {
 
         document.body.appendChild(iframe);
 
-        clearInterval(executeIframe);
       }
     }
+
   });
 };
 
-var executeIframe = setInterval(  verifyDataLayer , 3000 );
+var executeIframe = setInterval( verifyDataLayer , 3000 );
