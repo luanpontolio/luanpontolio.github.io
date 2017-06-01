@@ -1,17 +1,17 @@
 var executeIframe;
 
-var verifyDataLayer = (function(d){
+var verifyDataLayer = function(){
   // if(typeof dataLayer === "undefined"){
   //   return;
   // }
 
   console.log(iframe);
-  var customerId = d.querySelector("html").getAttribute("data-session");
-  var storeId    = d.scripts["mktplace"].getAttribute("data-store");
+  var customerId = document.querySelector("html").getAttribute("data-session");
+  var storeId    = document.scripts["mktplace"].getAttribute("data-store");
 
   if(customerId){
     var layer  = dataLayer[0];
-    var iframe = d.getElementById('iframe_mktplace');
+    var iframe = document.getElementById('iframe_mktplace');
 
     console.log(iframe);
     console.log(layer);
@@ -20,7 +20,7 @@ var verifyDataLayer = (function(d){
       var iframeUrl = "https://o.lomadee.com/loc/session/";
 
       console.log(layer);
-      var iframe         = d.createElement("iframe");
+      var iframe         = document.createElement("iframe");
       iframe.src         = iframeUrl + storeId + "?customerid=" + customerId;
       iframe.id          = "iframe_mktplace";
       iframe.width       = 0;
@@ -32,7 +32,7 @@ var verifyDataLayer = (function(d){
       document.body.appendChild(iframe);
     }
   }
-})(document);
+};
 
 executeIframe = setInterval( verifyDataLayer, 3000 );
 
