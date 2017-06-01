@@ -5,7 +5,7 @@
 
   var attributeValue = Array.prototype.slice.apply(d.scripts).filter(
     function(script){
-      return script.src.indexOf('mktplace_buscape.js.js') > -1;
+      return script.src.indexOf('mktplace_buscape.js') > -1;
   })[0].attributes['src'].value;
 
   var url     = attributeValue.split("?")[1];
