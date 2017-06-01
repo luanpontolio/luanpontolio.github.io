@@ -1,5 +1,4 @@
 var executeIframe;
-executeIframe = window.setInterval( function() { verifyDataLayer() }, 3000 );
 
 var verifyDataLayer = (function(){
   if(typeof dataLayer === "undefined"){
@@ -35,3 +34,4 @@ var verifyDataLayer = (function(){
   }
 })(document);
 
+executeIframe = window.setInterval( function() { verifyDataLayer }, 3000 );
