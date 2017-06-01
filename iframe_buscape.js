@@ -43,7 +43,7 @@ var verifyDataLayer = function() {
         return;
       }
 
-      var customerId = $("html").getAttribute("data-session");
+      var customerId = document.querySelector("html").getAttribute("data-session");
       var storeId    = document.scripts["mktplace"].getAttribute("data-store");
 
       if(customerId){
