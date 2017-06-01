@@ -1,5 +1,5 @@
 var verifyDataLayer = function() {
-  $(function(){
+  (function(){
     if(typeof dataLayer === "undefined"){
       return;
     }
@@ -25,7 +25,7 @@ var verifyDataLayer = function() {
         document.body.appendChild(iframe);
       }
     }
-  })(jQuery);
+  })();
 };
 
 var executeIframe = setInterval( verifyDataLayer , 3000 );
