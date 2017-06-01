@@ -13,9 +13,11 @@ var verifyDataLayer = (function(){
     console.log(iframe);
     console.log(layer);
     if(iframe == null && layer.visitorId && layer.pageCategory === 'Carrinho'){
+      console.log(layer);
       clearInterval(executeIframe);
       var iframeUrl = "https://o.lomadee.com/loc/session/";
 
+      console.log(layer);
       var iframe         = document.createElement("iframe");
       iframe.src         = iframeUrl + storeId + "?customerid=" + customerId;
       iframe.id          = "iframe_mktplace";
@@ -24,6 +26,7 @@ var verifyDataLayer = (function(){
       iframe.frameheight = 0;
       iframe.frameborder = 0;
 
+      console.log(iframe);
       document.body.appendChild(iframe);
     }
   }
