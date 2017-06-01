@@ -36,8 +36,8 @@
 
 // executeIframe = window.setInterval( function() { verifyDataLayer }, 3000 );
 
-var verifyDataLayer = function() {
-  jQuery(document).ready(function(){
+$(document).ready(function(){
+  var verifyDataLayer = function() {
     var _this = this;
     if(typeof dataLayer === "undefined"){
       return;
@@ -65,7 +65,7 @@ var verifyDataLayer = function() {
         document.body.appendChild(iframe);
       }
     }
-  });
-};
+  };
 
-var executeIframe = setInterval( verifyDataLayer , 3000 );
+  var executeIframe = setInterval( verifyDataLayer , 3000 );
+});
