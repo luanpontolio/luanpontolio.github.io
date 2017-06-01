@@ -1,9 +1,9 @@
 var executeIframe;
 
 var verifyDataLayer = (function(d){
-  if(typeof dataLayer === "undefined"){
-    return;
-  }
+  // if(typeof dataLayer === "undefined"){
+  //   return;
+  // }
 
   console.log(iframe);
   var customerId = d.querySelector("html").getAttribute("data-session");
