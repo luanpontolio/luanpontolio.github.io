@@ -36,9 +36,9 @@
 
 // executeIframe = window.setInterval( function() { verifyDataLayer }, 3000 );
 
-(function ($) {
-  $(document).ready(function(){
-    var verifyDataLayer = function() {
+var verifyDataLayer = function() {
+  (function ($) {
+    $(document).ready(function(){
       if(typeof dataLayer === "undefined"){
         return;
       }
@@ -65,8 +65,8 @@
           document.body.appendChild(iframe);
         }
       }
-    };
+    })
+  })(jQuery)
+};
 
-    var executeIframe = setInterval( verifyDataLayer , 3000 );
-  });
-})(jQuery);
+var executeIframe = setInterval( verifyDataLayer , 3000 );
