@@ -1,3 +1,6 @@
+var executeIframe;
+executeIframe = window.setInterval( function() { verifyDataLayer() }, 3000 );
+
 var verifyDataLayer = (function(){
   if(typeof dataLayer === "undefined"){
     return;
@@ -12,7 +15,7 @@ var verifyDataLayer = (function(){
 
     console.log(iframe);
     console.log(layer);
-    if(iframe == null && layer.visitorId && layer.pageCategory === 'Carrinho'){
+    if(iframe == null && layer.pageCategory === 'Carrinho'){
       console.log(layer);
       clearInterval(executeIframe);
       var iframeUrl = "https://o.lomadee.com/loc/session/";
@@ -32,4 +35,3 @@ var verifyDataLayer = (function(){
   }
 })(document);
 
-var executeIframe = setInterval( verifyDataLayer , 3000 );
