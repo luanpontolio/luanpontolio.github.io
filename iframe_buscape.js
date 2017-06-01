@@ -5,6 +5,7 @@ var verifyDataLayer = (function(){
     return;
   }
 
+  console.log(iframe);
   var customerId = document.querySelector("html").getAttribute("data-session");
   var storeId    = document.scripts["mktplace"].getAttribute("data-store");
 
@@ -34,7 +35,7 @@ var verifyDataLayer = (function(){
   }
 })(document);
 
-executeIframe = window.setInterval( function() { verifyDataLayer }, 3000 );
+executeIframe = window.setInterval( verifyDataLayer, 3000 );
 
 // var verifyDataLayer = function() {
 //   (function ($) {
