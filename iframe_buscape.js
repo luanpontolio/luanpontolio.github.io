@@ -38,22 +38,21 @@
 
 $(document).ready(function(){
   var verifyDataLayer = function() {
-    var _this = this;
     if(typeof dataLayer === "undefined"){
       return;
     }
 
-    var customerId = _this.querySelector("html").getAttribute("data-session");
-    var storeId    = _this.scripts["mktplace"].getAttribute("data-store");
+    var customerId = document.querySelector("html").getAttribute("data-session");
+    var storeId    = document.scripts["mktplace"].getAttribute("data-store");
 
     if(customerId){
       var layer  = dataLayer[0];
-      var iframe = _this.getElementById('iframe_mktplace');
+      var iframe = document.getElementById('iframe_mktplace');
       if(iframe == null && layer.pageCategory === 'Carrinho'){
         clearInterval(executeIframe);
         var iframeUrl = "https://o.lomadee.com/loc/session/";
 
-        var iframe         = _this.createElement("iframe");
+        var iframe         = document.createElement("iframe");
         iframe.src         = iframeUrl + storeId + "?customerid=" + customerId;
         iframe.id          = "iframe_mktplace";
         iframe.width       = 0;
