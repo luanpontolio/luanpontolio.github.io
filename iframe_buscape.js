@@ -16,7 +16,7 @@ var verifyDataLayer = function(){
           return data;
         }
       }
-    );
+    )[0];
 
     var iframe = document.getElementById('iframe_mktplace');
 
