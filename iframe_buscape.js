@@ -10,7 +10,14 @@ var verifyDataLayer = function(){
   var storeId    = document.scripts["mktplace"].getAttribute("data-store");
 
   if(customerId){
-    var layer  = dataLayer[0];
+    var layer  = Array.prototype.slice.apply(dataLayer).filter(
+      function(data){
+        if (data.pageCategory){
+          return data;
+        }
+      }
+    );
+
     var iframe = document.getElementById('iframe_mktplace');
 
     console.log(iframe);
