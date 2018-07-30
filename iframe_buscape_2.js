@@ -1,11 +1,12 @@
 var executeIframe;
 
 var verifyDataLayer = function(){
-  var customerId = document.querySelector("html").getAttribute("data-session");
-  var storeId    = document.scripts["mktplace"].getAttribute("data-store");
-  console.log(customerId);
-  console.log(dataLayer);
-  if(customerId){
+  var html               = document.querySelector("html");
+  var customerStoreId    = html.getAttribute("data-session");
+  var customerCheckoutId = html.getAttribute("data-checkout-session_id");
+  var storeId            = document.scripts["mktplace"].getAttribute("data-store");
+
+  if(customerStoreId || customerCheckoutId){
     var layer  = Array.prototype.slice.apply(dataLayer).filter(
       function(data){
         if (data.pageCategory){
@@ -15,12 +16,11 @@ var verifyDataLayer = function(){
     )[0];
 
     var iframe = document.getElementById('iframe_mktplace');
-    console.log(iframe);
-    console.log(layer);
+
     if(iframe == null && layer && layer.pageCategory === 'Carrinho'){
       clearInterval(executeIframe);
-      var iframeUrl = "https://o.lomadee.com/loc/session/";
-
+      var iframeUrl  = "https://o.lomadee.com/loc/session/";
+      var customerId = customerStoreId || customerCheckoutId
       var iframe         = document.createElement("iframe");
       iframe.src         = iframeUrl + storeId + "?customerid=" + customerId;
       iframe.id          = "iframe_mktplace";
