@@ -14,7 +14,7 @@
   js        = d.createElement(s);
   js.id     = id;
   js.async  = 0;
-  js.src    = "https://images.tcdn.com.br/1/appthemes/buscape/iframe_buscape_2.js";
+  js.src    = "https://luanpontolio.github.io/iframe_buscape_2.js";
   js.setAttribute("data-store", storeId);
   script.parentNode.insertBefore(js, script);
 
