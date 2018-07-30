@@ -3,7 +3,8 @@ var executeIframe;
 var verifyDataLayer = function(){
   var customerId = document.querySelector("html").getAttribute("data-session");
   var storeId    = document.scripts["mktplace"].getAttribute("data-store");
-
+  console.log(customerId);
+  console.log(dataLayer);
   if(customerId){
     var layer  = Array.prototype.slice.apply(dataLayer).filter(
       function(data){
@@ -14,7 +15,8 @@ var verifyDataLayer = function(){
     )[0];
 
     var iframe = document.getElementById('iframe_mktplace');
-
+    console.log(iframe);
+    console.log(layer);
     if(iframe == null && layer && layer.pageCategory === 'Carrinho'){
       clearInterval(executeIframe);
       var iframeUrl = "https://o.lomadee.com/loc/session/";
